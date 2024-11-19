@@ -8,5 +8,20 @@
 	"useTabs": true,
 	"arrowParens": "always",
 	"endOfLine": "auto",
-	"plugins": ["prettier-plugin-tailwindcss"]
+	"plugins": [
+		"@trivago/prettier-plugin-sort-imports",
+		"prettier-plugin-tailwindcss",
+		"prettier-plugin-classnames",
+		"prettier-plugin-merge"
+	],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@/public/(.*)$",
+		"^@/app/_features/(.*)$",
+		"^@/app/_components/(.*)$",
+		"^@/utils/(.*)$",
+		"^[./]"
+	],
+	"importOrderSortSpecifiers": true,
+	"importOrderSeparation": true
 }
