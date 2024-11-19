@@ -12,5 +12,11 @@ const config: StorybookConfig = {
 		name: '@storybook/nextjs',
 		options: {},
 	},
+	staticDirs: [
+		{
+			from: '../public/fonts/pretendard/woff2',
+			to: 'public/fonts/pretendard/woff2',
+		},
+	],
 };
 export default config;
