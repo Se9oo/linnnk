@@ -12,6 +12,11 @@ const config: Config = {
 			fontFamily: {
 				pretendard: ['var(--font-pretendard)'],
 			},
+			colors: {
+				primary: '#32b67a',
+				'primary-hover': '#0d8e5a',
+				'primary-active': '#0b714b',
+			},
 		},
 	},
 	plugins: [],
