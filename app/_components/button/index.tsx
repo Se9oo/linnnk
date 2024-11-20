@@ -17,7 +17,10 @@ export default function Button({ type = 'button', theme = 'primary', children, c
 	};
 
 	return (
-		<button type={type} className={cn('rounded-md px-4 py-2 transition-colors', buttonTheme[theme], className)}>
+		<button
+			type={type}
+			className={cn('tablet:text-base rounded-md px-4 py-2 text-sm transition-colors', buttonTheme[theme], className)}
+		>
 			{children}
 		</button>
 	);
