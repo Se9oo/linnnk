@@ -8,6 +8,10 @@ const config: Config = {
 		'./.storybook',
 	],
 	theme: {
+		screens: {
+			tablet: '600px',
+			laptop: '1024px',
+		},
 		extend: {
 			fontFamily: {
 				pretendard: ['var(--font-pretendard)'],
