@@ -26,7 +26,7 @@ const defaultOption: SVGProps<SVGSVGElement> = {
 	stroke: '#000000',
 };
 
-interface SVGIconProps extends SVGProps<SVGSVGElement> {
+export interface SVGIconProps extends SVGProps<SVGSVGElement> {
 	icon: keyof typeof icons;
 	className?: string;
 }
