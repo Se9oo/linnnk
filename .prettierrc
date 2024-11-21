@@ -19,6 +19,7 @@
 		"^@/public/(.*)$",
 		"^@/app/_features/(.*)$",
 		"^@/app/_components/(.*)$",
+		"^@/constants/(.*)$",
 		"^@/utils/(.*)$",
 		"^[./]"
 	],
