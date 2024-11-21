@@ -17,9 +17,9 @@ const config: Config = {
 				pretendard: ['var(--font-pretendard)'],
 			},
 			colors: {
-				primary: '#0f766e',
-				'primary-hover': '#115e59',
-				'primary-active': '#134e4a',
+				primary: '#2A737D',
+				'primary-hover': '#045864',
+				'primary-active': '#254b54',
 			},
 		},
 	},
