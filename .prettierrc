@@ -20,6 +20,7 @@
 		"^@/app/_features/(.*)$",
 		"^@/app/_components/(.*)$",
 		"^@/constants/(.*)$",
+		"^@/services/(.*)$",
 		"^@/utils/(.*)$",
 		"^[./]"
 	],
