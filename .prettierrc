@@ -21,7 +21,9 @@
 		"^@/app/_components/(.*)$",
 		"^@/constants/(.*)$",
 		"^@/services/(.*)$",
+		"^@/types/(.*)$",
 		"^@/utils/(.*)$",
+		"^@/supabase/(.*)$",
 		"^[./]"
 	],
 	"importOrderSortSpecifiers": true,
