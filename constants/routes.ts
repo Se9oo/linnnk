@@ -1,4 +1,4 @@
 export const APP_ROUTES = {
-	HOME: '/',
+	MAIN: '/',
 	SIGN_IN: '/signin',
 };
