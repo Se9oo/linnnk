@@ -1,10 +1,10 @@
-import { pretendard } from '@/app/_font';
 import type { Metadata } from 'next';
-
-import '@/public/globals.css';
 
 import AuthSession from '@/app/_components/auth/auth-session';
 import Header from '@/app/_components/header';
+import { pretendard } from '@/app/_font';
+
+import '../../public/globals.css';
 
 export const metadata: Metadata = {
 	title: 'linnnk',

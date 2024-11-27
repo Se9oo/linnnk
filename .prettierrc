@@ -17,6 +17,7 @@
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
 		"^@/public/(.*)$",
+		"^@/app/(.*)$",
 		"^@/app/_features/(.*)$",
 		"^@/app/_components/(.*)$",
 		"^@/constants/(.*)$",
