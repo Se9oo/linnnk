@@ -1,6 +1,8 @@
-import { pretendard } from '@/app/_font';
 import type { Preview } from '@storybook/react';
+
 import '@/public/globals.css';
+
+import { pretendard } from '@/app/_font';
 
 const preview: Preview = {
 	parameters: {
