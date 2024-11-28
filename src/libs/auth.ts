@@ -1,4 +1,5 @@
 import NextAuth from 'next-auth';
+import github from 'next-auth/providers/github';
 import kakao from 'next-auth/providers/kakao';
 
 import { APP_ROUTES } from '@/constants/routes';
@@ -17,6 +18,10 @@ export const {
 		kakao({
 			clientId: process.env.KAKAO_CLIENT_ID!,
 			clientSecret: process.env.KAKAO_CLIENT_SECRET!,
+		}),
+		github({
+			clientId: process.env.GITHUB_CLIENT_ID!,
+			clientSecret: process.env.GITHUB_CLIENT_SECRET!,
 		}),
 	],
 	callbacks: {
