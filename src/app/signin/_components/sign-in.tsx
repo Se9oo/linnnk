@@ -11,13 +11,20 @@ export default function SignIn() {
 
 	return (
 		<div className="mx-auto w-full max-w-[420px]">
-			<p className="mb-8 text-center">logo</p>
+			<p className="mb-8 text-center text-4xl">Linnnk</p>
 			<Button
-				className="w-full bg-[#FEE500] font-medium text-black hover:bg-[#FEE500] active:bg-[#FEE500]"
+				className="relative w-full bg-[#FEE500] font-medium text-black hover:bg-[#FEE500] active:bg-[#FEE500]"
 				onClick={() => signIn('kakao', signInOption)}
 			>
 				<img src="/assets/images/kakao-symbol.png" alt="kakao symbol" className="absolute h-7" />
 				<span className="">Sign in with Kakao</span>
+			</Button>
+			<Button
+				className="relative mt-2 w-full border bg-white text-black hover:bg-white active:bg-white"
+				onClick={() => signIn('google', signInOption)}
+			>
+				<img src="/assets/images/google-symbol.svg" alt="google symbol" className="absolute h-7" />
+				<span>Sign in with Google</span>
 			</Button>
 			<Button
 				className="relative mt-2 w-full bg-black font-medium text-white hover:bg-black active:bg-black"
