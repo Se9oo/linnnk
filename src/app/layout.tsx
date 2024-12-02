@@ -19,12 +19,10 @@ export default function RootLayout({
 	return (
 		<html lang="ko" className={`${pretendard.variable}`}>
 			<body className={`${pretendard.className} antialiased`}>
-				<main>
-					<AuthSession>
-						<Header />
-						{children}
-					</AuthSession>
-				</main>
+				<AuthSession>
+					<Header />
+					<main>{children}</main>
+				</AuthSession>
 			</body>
 		</html>
 	);
