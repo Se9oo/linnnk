@@ -1,11 +1,14 @@
 import type { Preview } from '@storybook/react';
 
-import '@/public/globals.css';
-
 import { pretendard } from '@/app/_font';
+
+import '../public/globals.css';
 
 const preview: Preview = {
 	parameters: {
+		nextjs: {
+			appDirectory: true,
+		},
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
