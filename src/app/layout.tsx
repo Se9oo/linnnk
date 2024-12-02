@@ -20,8 +20,10 @@ export default function RootLayout({
 		<html lang="ko" className={`${pretendard.variable}`}>
 			<body className={`${pretendard.className} antialiased`}>
 				<main>
-					<Header />
-					<AuthSession>{children}</AuthSession>
+					<AuthSession>
+						<Header />
+						{children}
+					</AuthSession>
 				</main>
 			</body>
 		</html>
