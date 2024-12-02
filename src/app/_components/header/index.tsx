@@ -1,7 +1,7 @@
 'use client';
 
 import { signOut, useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Button from '@/app/_components/button';
 import SVGButton from '@/app/_components/button/svg-button';
@@ -10,6 +10,8 @@ import { APP_ROUTES } from '@/constants/routes';
 
 export default function Header() {
 	const router = useRouter();
+	const pathname = usePathname();
+
 	const { data: session, status } = useSession();
 
 	const handleSign = () => {
@@ -28,7 +30,7 @@ export default function Header() {
 				<SVGButton icon="menu" width={32} height={32} strokeWidth={2} />
 				<span className="text-2xl">Linnnk</span>
 			</div>
-			{status !== 'loading' && (
+			{pathname !== APP_ROUTES.SIGN_IN && status !== 'loading' && (
 				<div className="flex basis-1/3 justify-end">
 					<Button size="sm" onClick={handleSign}>
 						{!!session?.user ? '로그아웃' : '로그인'}

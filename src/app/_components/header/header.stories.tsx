@@ -31,6 +31,24 @@ export const Default: Story = {
 	),
 };
 
+export const SignInPageHeader: Story = {
+	args: {},
+	parameters: {
+		nextjs: {
+			navigation: {
+				pathname: '/signin',
+			},
+		},
+	},
+	render: () => {
+		return (
+			<AuthSession>
+				<Header />
+			</AuthSession>
+		);
+	},
+};
+
 export const AfterSignInHeader: Story = {
 	args: {},
 	render: () => {
