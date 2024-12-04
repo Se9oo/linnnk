@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentType, SVGProps } from 'react';
 
-type IconName = 'menu';
+type IconName = 'menu' | 'link' | 'home' | 'linkList' | 'circlePlus';
 
 interface Icon {
 	options?: SVGProps<SVGSVGElement>;
@@ -14,7 +14,23 @@ const icons: Record<IconName, Icon> = {
 			strokeLinecap: 'round',
 			strokeLinejoin: 'round',
 		},
-		path: dynamic(() => import('@/app/_components/icon/svg/MenuIcon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/menu-icon'), { ssr: false }),
+	},
+	link: {
+		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
+		path: dynamic(() => import('@/app/_components/icon/svg/link-icon'), { ssr: false }),
+	},
+	home: {
+		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
+		path: dynamic(() => import('@/app/_components/icon/svg/home-icon'), { ssr: false }),
+	},
+	linkList: {
+		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
+		path: dynamic(() => import('@/app/_components/icon/svg/link-list-icon'), { ssr: false }),
+	},
+	circlePlus: {
+		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
+		path: dynamic(() => import('@/app/_components/icon/svg/circle-plus-icon'), { ssr: false }),
 	},
 };
 
