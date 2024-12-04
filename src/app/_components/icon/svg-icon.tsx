@@ -10,27 +10,19 @@ interface Icon {
 
 const icons: Record<IconName, Icon> = {
 	menu: {
-		options: {
-			strokeLinecap: 'round',
-			strokeLinejoin: 'round',
-		},
-		path: dynamic(() => import('@/app/_components/icon/svg/menu-icon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/menu-icon')),
 	},
 	link: {
-		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
-		path: dynamic(() => import('@/app/_components/icon/svg/link-icon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/link-icon')),
 	},
 	home: {
-		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
-		path: dynamic(() => import('@/app/_components/icon/svg/home-icon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/home-icon')),
 	},
 	linkList: {
-		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
-		path: dynamic(() => import('@/app/_components/icon/svg/link-list-icon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/link-list-icon')),
 	},
 	circlePlus: {
-		options: { strokeLinecap: 'round', strokeLinejoin: 'round' },
-		path: dynamic(() => import('@/app/_components/icon/svg/circle-plus-icon'), { ssr: false }),
+		path: dynamic(() => import('@/app/_components/icon/svg/circle-plus-icon')),
 	},
 };
 
@@ -40,6 +32,8 @@ const defaultOption: SVGProps<SVGSVGElement> = {
 	viewBox: '0 0 24 24',
 	strokeWidth: 1,
 	stroke: '#000000',
+	strokeLinecap: 'round',
+	strokeLinejoin: 'round',
 };
 
 export interface SVGIconProps extends SVGProps<SVGSVGElement> {
