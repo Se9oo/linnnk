@@ -19,6 +19,7 @@ const config: Config = {
 			height: {
 				header: '64px',
 				'screen-except-header': 'calc(100vh - 64px)',
+				'screen-except-header-and-footer-menu': 'calc(100dvh - 64px - 64px)',
 			},
 			boxShadow: {
 				input: 'inset 0 0 0 1px rgba(0,27,55,.1)',
