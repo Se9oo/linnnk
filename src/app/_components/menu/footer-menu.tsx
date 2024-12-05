@@ -23,7 +23,7 @@ const FOOTER_MENU = [
 	},
 	{
 		id: 'linkList',
-		icon: <SVGIcon icon="linkList" viewBox="0 0 35 32" width={40} height={36} className="fill-none" />,
+		icon: <SVGIcon icon="linkList" width={32} height={32} className="fill-none" />,
 		goTo: APP_ROUTES.LINK_LIST,
 	},
 	{
