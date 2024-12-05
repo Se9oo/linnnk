@@ -26,10 +26,7 @@ export default function Header() {
 
 	return (
 		<header className="h-header flex w-full items-center justify-between bg-white px-4 py-2 shadow-sm">
-			<div className="item-center flex basis-1/3 gap-4">
-				<SVGButton icon="menu" width={32} height={32} strokeWidth={2} />
-				<span className="text-2xl">Linnnk</span>
-			</div>
+			<span className="text-2xl">Linnnk</span>
 			{pathname !== APP_ROUTES.SIGN_IN && status !== 'loading' && (
 				<div className="flex basis-1/3 justify-end">
 					<Button size="sm" onClick={handleSign}>
