@@ -5,4 +5,5 @@ export const APP_ROUTES = {
 	HOME: '/home',
 	LINK: '/link',
 	LINK_LIST: '/link-list',
+	MY_PAGE: '/my-page',
 };
