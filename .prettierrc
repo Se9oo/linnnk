@@ -22,6 +22,7 @@
 		"^@/app/_components/(.*)$",
 		"^@/constants/(.*)$",
 		"^@/services/(.*)$",
+		"^@/stores/(.*)$",
 		"^@/types/(.*)$",
 		"^@/utils/(.*)$",
 		"^@/supabase/(.*)$",
