@@ -21,7 +21,7 @@ export default function RootLayout({
 			<body className={`${pretendard.className} antialiased`}>
 				<AuthSession>
 					<Header />
-					<main>{children}</main>
+					{children}
 				</AuthSession>
 			</body>
 		</html>

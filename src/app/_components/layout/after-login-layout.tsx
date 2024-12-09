@@ -6,9 +6,9 @@ interface AfterLoginLayoutProps {
 
 export default function AfterLoginLayout({ children }: AfterLoginLayoutProps) {
 	return (
-		<>
-			<div className="h-screen-except-header-and-footer-menu p-6">{children}</div>
+		<main>
+			<section className="h-screen-except-header-and-footer-menu p-6">{children}</section>
 			<FooterMenu />
-		</>
+		</main>
 	);
 }
