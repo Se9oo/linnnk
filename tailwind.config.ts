@@ -15,6 +15,7 @@ const config: Config = {
 				primary: '#79BAF2',
 				'primary-hover': '#4794ea',
 				'primary-active': '#3178df',
+				'back-drop': 'rgba(0,0,0,0.7)',
 			},
 			height: {
 				header: '64px',
