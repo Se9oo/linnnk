@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentType, SVGProps } from 'react';
 
-type IconName = 'menu' | 'link' | 'home' | 'linkList' | 'circlePlus';
+export type IconName = 'menu' | 'link' | 'home' | 'linkList' | 'circlePlus' | 'x';
 
 interface Icon {
 	options?: SVGProps<SVGSVGElement>;
@@ -23,5 +23,8 @@ export const SVG_ICONS: Record<IconName, Icon> = {
 	},
 	circlePlus: {
 		path: dynamic(() => import('@/app/_components/icon/svg/circle-plus-icon')),
+	},
+	x: {
+		path: dynamic(() => import('@/app/_components/icon/svg/x-icon')),
 	},
 };
