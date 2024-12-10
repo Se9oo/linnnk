@@ -21,12 +21,11 @@ export default function Modal() {
 	if (activeModals.length === 0) return null;
 
 	return createPortal(
-		<>
-			<BackDrop />
+		<BackDrop>
 			{activeModals.map((modal) => (
 				<div key={modal.id}>{modal.component}</div>
 			))}
-		</>,
+		</BackDrop>,
 		document.body,
 	);
 }
