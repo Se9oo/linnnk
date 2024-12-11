@@ -69,7 +69,11 @@ export const {
 				return APP_ROUTES.SIGN_IN_ERROR;
 			}
 		},
-		async jwt({ token, user }) {
+		async jwt({ token, user, account }) {
+			if (account) {
+				token.provider = account.provider;
+			}
+
 			return { ...token, ...user };
 		},
 
