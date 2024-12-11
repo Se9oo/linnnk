@@ -9,7 +9,7 @@
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"gen-types": "npx supabase gen types typescript --project-id \"shizqdeifwamlhokxfjo\" --schema public > types/supabase.ts"
+		"gen-types": "npx supabase gen types typescript --project-id \"shizqdeifwamlhokxfjo\" --schema public > src/types/supabase.ts"
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.46.1",
