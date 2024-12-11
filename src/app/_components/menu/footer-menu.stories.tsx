@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { SessionProvider } from 'next-auth/react';
 
 import FooterMenu from '@/app/_components/menu/footer-menu';
 
@@ -9,9 +10,11 @@ const meta = {
 	argTypes: {},
 	decorators: [
 		(Story) => (
-			<div className="h-[200px]">
-				<Story />
-			</div>
+			<SessionProvider>
+				<div className="h-[200px]">
+					<Story />
+				</div>
+			</SessionProvider>
 		),
 	],
 } satisfies Meta<typeof FooterMenu>;
