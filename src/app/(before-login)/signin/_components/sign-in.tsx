@@ -10,7 +10,7 @@ export default function SignIn() {
 	const signInOption: SignInOptions = { redirect: true, redirectTo: APP_ROUTES.HOME };
 
 	return (
-		<div className="mx-auto w-full max-w-[420px]">
+		<div className="mx-auto w-full max-w-[420px] p-6">
 			<p className="mb-8 text-center text-4xl">Linnnk</p>
 			<Button
 				className="relative w-full bg-[#FEE500] font-medium text-black hover:bg-[#FEE500] active:bg-[#FEE500]"
