@@ -28,9 +28,9 @@ export default function SignIn() {
 			</Button>
 			<Button
 				className="relative mt-2 w-full bg-black font-medium text-white hover:bg-black active:bg-black"
-				onClick={() => signIn('kakao', signInOption)}
+				onClick={() => signIn('github', signInOption)}
 			>
-				<img src="/assets/images/github-symbol.png" alt="github symbol" className="absolute h-7" />
+				<img src="/assets/images/github-white-symbol.svg" alt="github symbol" className="absolute h-7" />
 				<span>Sign in with Github</span>
 			</Button>
 		</div>
