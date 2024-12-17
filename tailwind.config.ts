@@ -26,6 +26,19 @@ const config: Config = {
 				input: 'inset 0 0 0 1px rgba(0,27,55,.1)',
 				'input-focus': 'inset 0 0 0 2px #2A737D',
 			},
+			keyframes: {
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+					},
+					'100%': {
+						opacity: '1',
+					},
+				},
+			},
+			animation: {
+				'fade-in': 'fade-in 0.2s ease',
+			},
 		},
 	},
 	plugins: [],
