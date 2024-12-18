@@ -21,7 +21,6 @@ export default function RootLayout({
 		<html lang="ko" className={`${pretendard.variable}`}>
 			<body className={`${pretendard.className} antialiased`}>
 				<AuthSession>
-					<Header />
 					{children}
 					<Modal />
 				</AuthSession>

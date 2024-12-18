@@ -1,3 +1,4 @@
+import AfterLoginHeader from '@/app/_components/header/after-login-header';
 import FooterMenu from '@/app/_components/menu/footer-menu';
 
 interface AfterLoginLayoutProps {
@@ -6,9 +7,12 @@ interface AfterLoginLayoutProps {
 
 export default function AfterLoginLayout({ children }: AfterLoginLayoutProps) {
 	return (
-		<main>
-			<section className="h-screen-except-header-and-footer-menu p-6">{children}</section>
-			<FooterMenu />
-		</main>
+		<>
+			<AfterLoginHeader />
+			<main>
+				<section className="h-screen-except-header-and-footer-menu p-6">{children}</section>
+				<FooterMenu />
+			</main>
+		</>
 	);
 }
