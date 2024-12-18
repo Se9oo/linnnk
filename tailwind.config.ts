@@ -12,9 +12,9 @@ const config: Config = {
 				pretendard: ['var(--font-pretendard)'],
 			},
 			colors: {
-				primary: '#79BAF2',
-				'primary-hover': '#4794ea',
-				'primary-active': '#3178df',
+				primary: '#4794ea',
+				'primary-hover': '#6AB2F0',
+				'primary-active': '#3278DE',
 				'back-drop': 'rgba(0,0,0,0.7)',
 			},
 			height: {
