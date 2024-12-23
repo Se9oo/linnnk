@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { MouseEvent, useEffect, useRef, useState } from 'react';
 
 import SVGButton from '@/app/_components/button/svg-button';
 
@@ -12,6 +12,8 @@ interface BottomSheetProps {
 }
 
 export default function BottomSheet({ children, className }: BottomSheetProps) {
+	const backgroundRef = useRef<HTMLDivElement | null>(null);
+
 	const { closeModal } = useModalActions();
 
 	const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +22,17 @@ export default function BottomSheet({ children, className }: BottomSheetProps) {
 		setIsOpen(true);
 	}, []);
 
+	const handleClickBackground = (e: MouseEvent<HTMLDivElement>) => {
+		if (backgroundRef.current && backgroundRef.current === e.target) {
+			setIsOpen(false);
+		}
+	};
+
 	return (
-		<div className="flex h-dvh w-full flex-col justify-end">
+		<div ref={backgroundRef} className="flex h-dvh w-full flex-col justify-end" onClick={handleClickBackground}>
 			<div
 				className={cn(
-					`h-[70%] w-full rounded-t-[60px] bg-white p-6 transition-transform duration-300
+					`h-[70%] w-full rounded-t-[60px] bg-white p-6 transition-transform duration-200
 					${isOpen ? 'translate-y-0' : 'translate-y-[100%]'}`,
 					className,
 				)}
