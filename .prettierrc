@@ -21,6 +21,7 @@
 		"^@/app/_features/(.*)$",
 		"^@/app/_components/(.*)$",
 		"^@/constants/(.*)$",
+		"^@/libs/(.*)$",
 		"^@/services/(.*)$",
 		"^@/stores/(.*)$",
 		"^@/types/(.*)$",
