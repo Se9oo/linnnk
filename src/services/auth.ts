@@ -1,22 +1,16 @@
 import { nanoid } from 'nanoid';
 
+import { HTTP } from '@/libs/ky';
+
 import { Tables } from '@/types/supabase';
 
 import { supabase } from '@/supabase/supabaseClient';
 
 export const AuthAPI = {
-	getUserList: async () => {
-		return await supabase.from('user').select('*').eq('status', 1).returns<Tables<'user'>[]>();
-	},
-
 	checkExistUser: async ({ socialKey, socialType }: SocialInfo) => {
-		return await supabase
-			.from('user')
-			.select('*')
-			.eq('status', 1)
-			.eq('social_key', socialKey)
-			.eq('social_type', socialType)
-			.returns<Tables<'user'>[]>();
+		return await HTTP.get<Tables<'user'>[]>(
+			`/api/user/check-exist-user?socialKey=${socialKey}&socialType=${socialType}`,
+		);
 	},
 
 	signUpUser: async ({ userName, socialKey, socialType }: SignUpUserParams) => {

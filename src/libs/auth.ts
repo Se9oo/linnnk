@@ -42,17 +42,17 @@ export const {
 				const { provider, providerAccountId } = account;
 
 				// 기존 회원 여부 체크
-				const { data, error } = await AuthAPI.checkExistUser({
+				const response = await AuthAPI.checkExistUser({
 					socialKey: providerAccountId,
 					socialType: provider as SocialCompanies,
 				});
 
-				if (error || !data) {
+				if (!response) {
 					return APP_ROUTES.SIGN_IN_ERROR;
 				}
 
 				// 기존 회원이 아니라면 회원가입
-				if (data.length === 0) {
+				if (response.length === 0) {
 					const { error } = await AuthAPI.signUpUser({
 						userName: name || '',
 						socialKey: providerAccountId,
