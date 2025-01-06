@@ -4,9 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import SVGIcon from '@/app/_components/icon/svg-icon';
+import AddSingleLinkModal from '@/app/_components/menu/add-single-link-modal';
 
 import { APP_ROUTES } from '@/constants/routes';
 import { IconName } from '@/constants/svg-icon';
+
+import { useModalActions } from '@/stores/modal';
 
 interface FooterMenu {
 	id: string;
@@ -37,8 +40,14 @@ const FOOTER_MENU: FooterMenu[] = [
 ];
 
 const AddLinkButton = () => {
+	const { openModal } = useModalActions();
+
+	const handleAddLink = () => {
+		openModal({ modalContent: <AddSingleLinkModal /> });
+	};
+
 	return (
-		<button className="flex w-full flex-col items-center justify-center">
+		<button onClick={handleAddLink} className="flex w-full flex-col items-center justify-center">
 			<SVGIcon viewBox="0 0 42 42" icon="polygonPlus" width={48} height={48} className="fill-primary stroke-white" />
 		</button>
 	);
