@@ -24,7 +24,7 @@ const config: Config = {
 			},
 			boxShadow: {
 				input: 'inset 0 0 0 1px rgba(0,27,55,.1)',
-				'input-focus': 'inset 0 0 0 2px #2A737D',
+				'input-focus': 'inset 0 0 0 2px #4794ea',
 			},
 			keyframes: {
 				'fade-in': {
