@@ -1,10 +1,6 @@
-import { nanoid } from 'nanoid';
-
 import { HTTP } from '@/libs/ky';
 
 import { Tables } from '@/types/supabase';
-
-import { supabase } from '@/supabase/supabaseClient';
 
 export const AuthAPI = {
 	checkExistUser: async ({ socialKey, socialType }: SocialInfo) => {
@@ -13,13 +9,7 @@ export const AuthAPI = {
 		);
 	},
 
-	signUpUser: async ({ userName, socialKey, socialType }: SignUpUserParams) => {
-		return await supabase.from('user').insert({
-			id: nanoid(),
-			user_name: userName,
-			social_key: socialKey,
-			social_type: socialType,
-			status: 1,
-		});
+	signUpUser: async (params: SignUpUserParams) => {
+		return await HTTP.post<null, SignUpUserParams>(`api/user`, params);
 	},
 };

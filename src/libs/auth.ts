@@ -53,15 +53,11 @@ export const {
 
 				// 기존 회원이 아니라면 회원가입
 				if (response.length === 0) {
-					const { error } = await AuthAPI.signUpUser({
+					await AuthAPI.signUpUser({
 						userName: name || '',
 						socialKey: providerAccountId,
 						socialType: provider as SocialCompanies,
 					});
-
-					if (error) {
-						return APP_ROUTES.SIGN_IN_ERROR;
-					}
 				}
 
 				return true;
