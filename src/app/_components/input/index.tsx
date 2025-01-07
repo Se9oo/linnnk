@@ -1,4 +1,5 @@
 import { InputHTMLAttributes } from 'react';
+import { useFormContext } from 'react-hook-form';
 
 import cn from '@/utils/cn';
 
@@ -17,6 +18,11 @@ function Container({ children, className }: InputContainerProps) {
 }
 
 function InputMain({ id, type = 'text', title, className, placeholder, ...rest }: InputProps) {
+	const formContext = useFormContext();
+
+	// react-hook-form register
+	const register = formContext && id ? { ...formContext.register(id) } : undefined;
+
 	return (
 		<div>
 			{title && (
@@ -29,12 +35,13 @@ function InputMain({ id, type = 'text', title, className, placeholder, ...rest }
 				type={type}
 				placeholder={placeholder}
 				className={cn(
-					`shadow-input active:shadow-input-focus hover:shadow-input-focus focus:shadow-input-focus h-12 w-full rounded-lg px-4
-					outline-none transition-shadow`,
+					`h-12 w-full rounded-lg px-4 shadow-input outline-none transition-shadow hover:shadow-input-focus
+					focus:shadow-input-focus active:shadow-input-focus`,
 					'read-only:pointer-events-none read-only:bg-gray-50',
 					className,
 				)}
 				{...rest}
+				{...register}
 			/>
 		</div>
 	);
