@@ -2,9 +2,12 @@ import SVGButton from '@/app/_components/button/svg-button';
 
 import { useModalActions } from '@/stores/modal';
 
+import cn from '@/utils/cn';
+
 interface ModalContainerProps {
 	children: React.ReactNode;
 	title?: string;
+	className?: string;
 }
 
 function ModalHeader({ title }: { title?: string }) {
@@ -22,9 +25,9 @@ function CloseButton() {
 	return <SVGButton icon="x" onClick={closeModal} width={36} height={36} />;
 }
 
-export default function ModalContainer({ children, title }: ModalContainerProps) {
+export default function ModalContainer({ children, title, className }: ModalContainerProps) {
 	return (
-		<div className="relative max-h-[80%] w-[80%] rounded-xl bg-white p-6">
+		<div className={cn('relative max-h-[80%] w-[80%] rounded-xl bg-white p-6', className)}>
 			<ModalHeader title={title} />
 			{children}
 		</div>
