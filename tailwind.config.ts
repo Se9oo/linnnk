@@ -15,6 +15,7 @@ const config: Config = {
 				primary: '#4794ea',
 				'primary-hover': '#6AB2F0',
 				'primary-active': '#3278DE',
+				'primary-light': '#f0f7fe',
 				'back-drop': 'rgba(0,0,0,0.7)',
 			},
 			height: {
