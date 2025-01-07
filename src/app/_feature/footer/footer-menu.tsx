@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import SVGIcon from '@/app/_components/icon/svg-icon';
-import AddSingleLinkModal from '@/app/_components/menu/add-single-link-modal';
+import AddSingleLinkModal from '@/app/_feature/footer/add-single-link-modal';
 
 import { APP_ROUTES } from '@/constants/routes';
 import { IconName } from '@/constants/svg-icon';
