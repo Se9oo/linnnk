@@ -1,6 +1,6 @@
 import CenterContainer from '@/app/_components/layout/center-container';
 import ModalContainer from '@/app/_components/modal/modal-container';
-import AddSingleLinkForm from '@/app/_feature/footer/add-single-link-form';
+import AddSingleLinkForm from '@/app/_feature/link/components/add-single-link-form';
 
 export default function AddSingleLinkModal() {
 	return (

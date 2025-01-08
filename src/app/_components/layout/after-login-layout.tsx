@@ -1,5 +1,5 @@
+import FooterMenu from '@/app/_components/footer/footer-menu';
 import AfterLoginHeader from '@/app/_components/header/after-login-header';
-import FooterMenu from '@/app/_feature/footer/footer-menu';
 
 interface AfterLoginLayoutProps {
 	children: React.ReactNode;

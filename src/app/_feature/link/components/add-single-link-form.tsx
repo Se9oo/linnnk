@@ -14,7 +14,7 @@ export default function AddSingleLinkForm() {
 				<Input id="url" title="URL" />
 				<div className="mt-6 flex items-center justify-between">
 					<span className="text-lg">태그</span>
-					<Button theme="outline" className="h-10">
+					<Button size="sm" theme="outline">
 						태그 추가
 					</Button>
 				</div>

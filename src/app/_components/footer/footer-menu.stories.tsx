@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SessionProvider } from 'next-auth/react';
 
-import FooterMenu from '@/app/_components/menu/footer-menu';
+import FooterMenu from '@/app/_components/footer/footer-menu';
 
 const meta = {
 	title: 'Components/Menu/FooterMenu',
