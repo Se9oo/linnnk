@@ -1,4 +1,4 @@
 interface AddSingleLinkFormType {
 	url: string;
-	tags: { id: string; tagName: string }[];
+	tags: { id: string; tagName: string; isSelected: boolean }[];
 }
