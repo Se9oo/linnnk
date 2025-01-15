@@ -2,7 +2,7 @@ import { useFormContext } from 'react-hook-form';
 
 import Button from '@/app/_components/button';
 import { Input } from '@/app/_components/input';
-import SelectedTagList from '@/app/_feature/tag/components/selected-tag-list';
+import SelectedTagList from '@/app/_feature/link/components/selected-tag-list';
 
 import { useFunnelActions } from '@/stores/funnel';
 

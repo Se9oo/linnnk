@@ -2,7 +2,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 
 import { Funnel } from '@/app/_components/funnel';
 import AddSingleLinkForm from '@/app/_feature/link/components/add-single-link-form';
-import TagSelector from '@/app/_feature/tag/components/tag-selector';
+import TagSelector from '@/app/_feature/link/components/tag-selector';
 
 const tags = [
 	{

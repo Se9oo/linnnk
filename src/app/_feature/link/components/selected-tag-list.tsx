@@ -8,7 +8,7 @@ export default function SelectedTagList() {
 	const tagList = tags?.filter((tag) => tag.isSelected);
 
 	return (
-		<ul className="mt-4 flex w-full flex-nowrap items-center gap-2 overflow-x-auto py-2">
+		<ul className="mt-4 flex w-full flex-nowrap items-center gap-2 overflow-x-auto py-4">
 			{tagList?.map((tag) => (
 				<li key={tag.id}>
 					<Chip name={tag.tagName || ''} />

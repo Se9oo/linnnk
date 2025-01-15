@@ -4,7 +4,7 @@ import { useFieldArray, useFormContext } from 'react-hook-form';
 
 import Button from '@/app/_components/button';
 import Checkbox from '@/app/_components/input/checkbox';
-import AddNewTag from '@/app/_feature/tag/components/add-new-tag';
+import AddNewTag from '@/app/_feature/link/components/add-new-tag';
 
 import { useFunnelActions } from '@/stores/funnel';
 
@@ -20,7 +20,7 @@ export default function TagSelector() {
 
 	return (
 		<>
-			<ul className="grid max-h-[50%] grid-cols-2 gap-4 overflow-y-auto border-b py-4">
+			<ul className="grid max-h-[50%] grid-cols-2 gap-2 overflow-y-auto border-b py-2">
 				{fields.map((tag, idx) => (
 					<li key={`${tag.id}.${idx}`} className="py-1">
 						<Checkbox id={`tags.${idx}.isSelected`} name={tag.tagName} />
