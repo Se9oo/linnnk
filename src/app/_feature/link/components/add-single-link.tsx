@@ -27,10 +27,26 @@ const tags = [
 	},
 ];
 
+const linkList = [
+	{
+		id: 'linkList1',
+		title: '개발',
+	},
+	{
+		id: 'linkList2',
+		title: '레시피',
+	},
+	{
+		id: 'linkList3',
+		title: '취미',
+	},
+];
+
 export default function AddSingleLink() {
 	const methods = useForm<AddSingleLinkFormType>({
 		defaultValues: {
 			tags,
+			linkList,
 		},
 	});
 
