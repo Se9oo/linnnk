@@ -17,6 +17,7 @@ const config: Config = {
 				'primary-active': '#3278DE',
 				'primary-light': '#f0f7fe',
 				'back-drop': 'rgba(0,0,0,0.7)',
+				error: '#ef4444',
 			},
 			height: {
 				header: '64px',
@@ -26,6 +27,7 @@ const config: Config = {
 			boxShadow: {
 				input: 'inset 0 0 0 1px rgba(0,27,55,.1)',
 				'input-focus': 'inset 0 0 0 2px #4794ea',
+				'input-error': 'inset 0 0 0 2px #ef4444',
 			},
 			keyframes: {
 				'fade-in': {
