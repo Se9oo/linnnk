@@ -22,6 +22,7 @@ function InputMain({ id, type = 'text', title, className, placeholder, ...rest }
 
 	// react-hook-form register
 	const register = formContext && id ? { ...formContext.register(id) } : undefined;
+	const error = id ? formContext.formState.errors[id] : undefined;
 
 	return (
 		<div>
@@ -38,11 +39,13 @@ function InputMain({ id, type = 'text', title, className, placeholder, ...rest }
 					`h-12 w-full rounded-lg px-4 shadow-input outline-none transition-shadow hover:shadow-input-focus
 					focus:shadow-input-focus active:shadow-input-focus`,
 					'read-only:pointer-events-none read-only:bg-gray-50',
+					`${error?.message && 'shadow-input-error hover:shadow-input-error focus:shadow-input-error active:shadow-input-error'}`,
 					className,
 				)}
 				{...rest}
 				{...register}
 			/>
+			{error?.message && <span className="text-error mt-2 block">{error.message.toString()}</span>}
 		</div>
 	);
 }
