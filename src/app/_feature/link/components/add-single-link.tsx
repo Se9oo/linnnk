@@ -1,4 +1,6 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import { FormProvider, useForm } from 'react-hook-form';
+import z from 'zod';
 
 import { Funnel } from '@/app/_components/funnel';
 import AddSingleLinkForm from '@/app/_feature/link/components/add-single-link-form';
@@ -42,8 +44,13 @@ const linkList = [
 	},
 ];
 
+const schema = z.object({
+	url: z.string().min(1, { message: 'URL을 입력해 주세요' }),
+});
+
 export default function AddSingleLink() {
 	const methods = useForm<AddSingleLinkFormType>({
+		resolver: zodResolver(schema),
 		defaultValues: {
 			tags,
 			linkList,
